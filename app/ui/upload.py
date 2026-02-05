@@ -20,6 +20,7 @@ def upload_csv():
 
         # Storing in session state
         st.session_state["df"] = df
+        st.session_state["uploaded_filename"] = uploaded_file.name
         st.session_state.pop("cleaned_df", None)
         st.session_state.pop("clean_done", None)
 
