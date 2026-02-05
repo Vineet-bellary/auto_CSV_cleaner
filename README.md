@@ -10,11 +10,11 @@ The project focuses on implementing an **industry-style data preprocessing pipel
 
 In real-world Machine Learning projects, a significant portion of development time is spent on **cleaning and preparing datasets**.This process often requires programming expertise and repetitive preprocessing code, creating a barrier for beginners and non-technical users.
 
-Proposed Solution
+## Proposed Solution
 
 This project provides a **user-friendly web interface** that automates common data preprocessing steps while maintaining transparency and control.Users can upload a CSV file, analyze its quality, perform automatic cleaning using safe defaults, and verify improvements through re-profiling.
 
-Key Features (Implemented)
+## Key Features (Implemented)
 
 ### 1 CSV Dataset Ingestion
 
