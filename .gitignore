@@ -1,8 +1,18 @@
-# Environment Variables
-.venv
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+
+# Streamlit
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db
 
 # Folders
-misc/
-
-# DataFiles
-*.csv
+misc
