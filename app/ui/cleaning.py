@@ -19,5 +19,7 @@ def show_cleaning(df):
             st.dataframe(cleaned_df.head())
             
             
+            
+            
         else:
             st.warning(st.markdown("### There is an Issue"))
