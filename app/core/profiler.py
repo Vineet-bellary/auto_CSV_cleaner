@@ -14,7 +14,7 @@ def profile_dataset(df: pd.DataFrame) -> dict:
         .rename(columns={"index": "column", 0: "missing_count"})
     )
 
-    profile["duplicat_rows"] = df.duplicated().sum()
+    profile["duplicate_rows"] = df.duplicated().sum()
 
     profile["dtypes"] = (
         df.dtypes.astype(str)

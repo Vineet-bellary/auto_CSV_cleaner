@@ -10,8 +10,8 @@ def show_profiling(df):
     col1, col2, col3 = st.columns(3)
     col1.metric("Rows", profile["rows"])
     col2.metric("Columns", profile["columns"])
-    col3.metric("Duplicate Rows", profile["duplicat_rows"])
-    
+    col3.metric("Duplicate Rows", profile["duplicate_rows"])
+
     tab1, tab2, tab3 = st.tabs(["Data Types", "Unique Values", "Missing Values"])
     with tab1:
         st.dataframe(profile["dtypes"])
