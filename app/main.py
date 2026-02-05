@@ -18,7 +18,7 @@ if df is not None:
         "_Auto Clean uses median for numerical columns and mode for categorical columns._"
     )
 
-if st.session_state.get("cleaned_done"):
+if st.session_state.get("clean_done"):
     st.markdown("## **Cleaned Dataset Profiling**")
     cleaned_df = st.session_state["cleaned_df"]
     if cleaned_df is not None:
