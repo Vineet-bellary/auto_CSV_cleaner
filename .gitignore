@@ -1,0 +1,8 @@
+# Environment Variables
+.venv
+
+# Folders
+misc/
+
+# DataFiles
+misc\Player.csv
