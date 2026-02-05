@@ -3,7 +3,7 @@ import os
 
 
 def download_cleaned_csv():
-    cleaned_df = st.session_state["cleaned_df"]
+    cleaned_df = st.session_state.get("cleaned_df")
     orig_filename = st.session_state.get(key="uploaded_filename", default="dataset.csv")
 
     if cleaned_df is None:
