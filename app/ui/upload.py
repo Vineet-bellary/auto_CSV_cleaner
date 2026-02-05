@@ -20,11 +20,13 @@ def upload_csv():
 
         # Storing in session state
         st.session_state["df"] = df
+        st.session_state.pop("cleaned_df", None)
+        st.session_state.pop("cleaned_done", None)
 
         st.success("CSV file uploaded successfully")
 
         st.subheader("Data Preview")
-        st.dataframe(df.head())
+        st.dataframe(df)
 
         return df
 

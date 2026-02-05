@@ -13,14 +13,14 @@ if df is not None:
     st.markdown("## **Raw Dataset Profiling**")
     show_profiling(df)
 
+    show_cleaning(df)
     st.info(
         "_Auto Clean uses median for numerical columns and mode for categorical columns._"
     )
-    show_cleaning(df)
 
-    cleaned_df = st.session_state.get("cleaned_df")
-
+if st.session_state.get("cleaned_done"):
+    st.markdown("## **Cleaned Dataset Profiling**")
+    cleaned_df = st.session_state["cleaned_df"]
     if cleaned_df is not None:
-        st.markdown("## **Cleaned Dataset Profiling**")
         show_profiling(cleaned_df)
         st.success("_Profiling after cleaning confirms dataset is ML-ready._")

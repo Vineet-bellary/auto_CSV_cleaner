@@ -12,14 +12,12 @@ def show_cleaning(df):
 
             # store the cleaned version in session
             st.session_state["cleaned_df"] = cleaned_df
+            st.session_state["cleaned"] = True
 
-            st.success("Dataset Cleaned Successfully")
+            st.success("_Dataset Cleaned Successfully_")
 
             st.markdown("### Cleaned Dataset Preview")
             st.dataframe(cleaned_df.head())
-            
-            
-            
-            
+
         else:
-            st.warning(st.markdown("### There is an Issue"))
+            st.warning("### There is an Issue")

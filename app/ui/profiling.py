@@ -12,12 +12,7 @@ def show_profiling(df):
     col2.metric("Columns", profile["columns"])
     col3.metric("Duplicate Rows", profile["duplicate_rows"])
 
-    tab1, tab2, tab3 = st.tabs(["Data Types", "Unique Values", "Missing Values"])
-    with tab1:
-        st.dataframe(profile["dtypes"])
-    with tab2:
-        st.dataframe(profile["unique_values"])
-    with tab3:
-        missing_df = profile["missing_values"]
-        missing_df = missing_df[missing_df["missing_count"] > 0]
-        st.dataframe(missing_df)
+    combined_df = profile["dtypes"].merge(profile["unique_values"], on="column")
+    combined_df = profile["unique_values"].merge(profile["missing_values"], on="column")
+
+    st.dataframe(combined_df, use_container_width=True)
