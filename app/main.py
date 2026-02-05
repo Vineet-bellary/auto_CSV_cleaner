@@ -10,17 +10,17 @@ st.title("Automatic CSV Data Cleaner")
 df = upload_csv()
 
 if df is not None:
-    st.markdown("## Raw Dataset Profiling")
+    st.markdown("## **Raw Dataset Profiling**")
     show_profiling(df)
 
     st.info(
-        "Auto Clean uses median for numerical columns and mode for categorical columns."
+        "_Auto Clean uses median for numerical columns and mode for categorical columns._"
     )
     show_cleaning(df)
 
     cleaned_df = st.session_state.get("cleaned_df")
 
     if cleaned_df is not None:
-        st.markdown("## Cleaned Dataset Profiling")
+        st.markdown("## **Cleaned Dataset Profiling**")
         show_profiling(cleaned_df)
-        st.success("Profiling after cleaning confirms dataset is ML-ready.")
+        st.success("_Profiling after cleaning confirms dataset is ML-ready._")
