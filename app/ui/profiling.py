@@ -18,4 +18,6 @@ def show_profiling(df):
     with tab2:
         st.dataframe(profile["unique_values"])
     with tab3:
-        st.dataframe(profile["missing_values"])
+        missing_df = profile["missing_values"]
+        missing_df = missing_df[missing_df["missing_count"] > 0]
+        st.dataframe(missing_df)
