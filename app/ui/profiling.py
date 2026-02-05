@@ -12,7 +12,8 @@ def show_profiling(df):
     col2.metric("Columns", profile["columns"])
     col3.metric("Duplicate Rows", profile["duplicate_rows"])
 
-    combined_df = profile["dtypes"].merge(profile["unique_values"], on="column")
-    combined_df = profile["unique_values"].merge(profile["missing_values"], on="column")
+    combined_df = profile["dtypes"]
+    combined_df = combined_df.merge(profile["unique_values"], on="column")
+    combined_df = combined_df.merge(profile["missing_values"], on="column")
 
     st.dataframe(combined_df, use_container_width=True)
